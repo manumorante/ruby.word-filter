@@ -7,8 +7,7 @@ class Message
    msg = gets.chomp.downcase.split(" ")
 
   dirty = 0  
-  msg.each {|word|
-  dirty=1 if blacklist.include? word}
+  msg.each {|word|dirty=1 if blacklist.include? word}
   puts dirty=1? "Mensaje Bloqueado":"Todo correcto"
   
  end
