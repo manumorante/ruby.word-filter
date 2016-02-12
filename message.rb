@@ -10,6 +10,8 @@ BLACK_LIST = ["malditos","maricones","putas"]
   end
 end
   
+msg1 = Message.new
+msg1.msg_filter
 
 
 
