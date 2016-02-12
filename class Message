@@ -1,18 +1,15 @@
 class Message
-
+BLACK_LIST = ["malditos","maricones","putas"]
+  
   def msg_filter
-  blacklist = ["malditos","maricones","putas"]
   
-   p "Escribe tu mensaje"
-   msg = gets.chomp.downcase.split(" ")
-
-  dirty = 0  
-  msg.each {|word|dirty=1 if blacklist.include? word}
-  puts dirty=1? "Mensaje Bloqueado":"Todo correcto"
+  p "Escribe tu mensaje"
+  words = gets.chomp.downcase.split(" ")
+  p words.any? {|word| BLACK_LIST.include?word} ? "Mensaje Bloqueado":"Todo correcto"
   
- end
+  end
 end
+  
 
-msg1 = Message.new
-msg1.msg_filter
+
 
